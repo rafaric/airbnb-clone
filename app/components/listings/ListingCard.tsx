@@ -14,8 +14,8 @@ interface ListingCardProps {
   reservation?: Reservation;
   onAction?: (id: string) => void;
   disabled?: boolean;
-  actionLabel: string;
-  actionId: string;
+  actionLabel?: string;
+  actionId?: string;
   currentUser?: User | null;
 }
 
@@ -25,7 +25,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
   onAction,
   disabled,
   actionLabel,
-  actionId,
+  actionId = "",
   currentUser,
 }) => {
   const router = useRouter();
